@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Upload</title>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Upload Your File</h2>
+
+      <!-- Drag and Drop Area -->
+      <div id="drop-zone">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M12 12v8m0 0l-4-4m4 4l4-4M12 12V4"
+          />
+        </svg>
+        <p>Drag & Drop a file here or click to browse</p>
+        <input type="file" id="file-input" />
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-wrapper">
+        <div class="progress-track">
+          <div id="progress-bar"></div>
+        </div>
+        <p id="progress-text">0%</p>
+      </div>
+
+      <!-- Status Message -->
+      <p id="status"></p>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+# Go binaries
+simple-upload
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# Dependency directories
+vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Uploaded files directory
+uploads/*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# SSL certificates and keys
+*.crt
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build artifacts
+dist/
+build/
+
+# Node.js dependencies (for UI)
+ui/node_modules/
+ui/dist/
+ui/.vite/
+ui/.env
+ui/.env.local
+ui/.env.*.local
+
+# Coverage reports
+coverage.out
+coverage.html

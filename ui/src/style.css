@@ -1,0 +1,157 @@
+/* 🎨 Theme Variables */
+:root {
+  --bg-gradient: linear-gradient(to right, #ebf8ff, #f3e8ff);
+  --text-color: #2d3748;
+  --container-bg: #fff;
+  --container-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --heading-color: #2d3748;
+
+  --drop-border: #d1d5db;
+  --drop-bg: linear-gradient(to bottom, #fff, #f9fafb);
+  --drop-hover-bg: linear-gradient(to bottom, #f9fafb, #fff);
+  --drop-text: #6b7280;
+
+  --progress-track: #e5e7eb;
+  --progress-bar: linear-gradient(to right, #60a5fa, #a78bfa);
+  --progress-text: #4b5563;
+
+  --status-text: #2d3748;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-gradient: linear-gradient(to right, #1e293b, #0f172a);
+    --text-color: #f9fafb;
+    --container-bg: #1f2937;
+    --container-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    --heading-color: #f9fafb;
+
+    --drop-border: #374151;
+    --drop-bg: linear-gradient(to bottom, #1f2937, #111827);
+    --drop-hover-bg: linear-gradient(to bottom, #111827, #1f2937);
+    --drop-text: #9ca3af;
+
+    --progress-track: #374151;
+    --progress-bar: linear-gradient(to right, #60a5fa, #a78bfa);
+    --progress-text: #d1d5db;
+
+    --status-text: #e5e7eb;
+  }
+}
+
+/* 🌐 Base Layout */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 32rem;
+  padding: 2rem;
+  background: var(--container-bg);
+  border-radius: 1.5rem;
+  box-shadow: var(--container-shadow);
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+}
+
+/* 📂 Drop Zone */
+#drop-zone {
+  border: 2px dashed var(--drop-border);
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: var(--drop-bg);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+#drop-zone:hover {
+  background: var(--drop-hover-bg);
+}
+
+#drop-zone svg {
+  display: block;
+  margin: 0 auto 1rem;
+  height: 3rem;
+  width: 3rem;
+  color: #60a5fa;
+}
+
+#drop-zone p {
+  color: var(--drop-text);
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+#file-input {
+  display: none;
+}
+
+/* 📊 Progress Bar */
+.progress-wrapper {
+  margin-top: 1.5rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 1.25rem;
+  background: var(--progress-track);
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--progress-bar);
+  transition: width 0.3s ease;
+}
+
+#progress-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: var(--progress-text);
+  font-weight: 500;
+}
+
+/* ℹ️ Status Message */
+#status {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--status-text);
+}
+
+/* DropZone highlight */
+.highlight {
+  border-color: #60a5fa !important; /* blue-400 */
+  background-color: #eff6ff !important; /* blue-50 */
+}
+
+/* Upload status */
+.error {
+  color: #ef4444; /* red-500 */
+}
+
+.success {
+  color: #22c55e; /* green-500 */
+}
